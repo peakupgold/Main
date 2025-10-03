@@ -1,3 +1,22 @@
+/* Email form submit button: match .button and .buttonfind for centering and padding */
+.fit.primary {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	text-align: center !important;
+	padding: 1.1em 1.5em !important;
+	font-size: 1em !important;
+	min-width: 120px !important;
+	border-radius: 0.5em !important;
+}
+
+@media screen and (max-width: 480px) {
+	.fit.primary {
+		padding: 1em 1.1em !important;
+		font-size: 0.95em !important;
+		min-width: 100px !important;
+	}
+}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 html, body {
@@ -66,12 +85,16 @@ html, body {
 		flex-direction: column !important;
 		gap: 0.5em !important;
 	}
-	.buttonfind {
-		font-size: 1em !important;
-		padding: 0.9em 1.5em !important;
-		min-width: 120px !important;
-		border-radius: 0.5em !important;
-	}
+	   .buttonfind {
+		   font-size: 1em !important;
+		   padding: 1.1em 1.5em !important;
+		   min-width: 120px !important;
+		   border-radius: 0.5em !important;
+		   display: flex !important;
+		   align-items: center !important;
+		   justify-content: center !important;
+		   text-align: center !important;
+	   }
 	.image {
 		padding: 0 !important;
 	}
@@ -122,11 +145,15 @@ html, body {
 		flex-direction: column !important;
 		gap: 0.3em !important;
 	}
-	.buttonfind {
-		font-size: 0.95em !important;
-		padding: 0.8em 1.1em !important;
-		min-width: 100px !important;
-	}
+	   .buttonfind {
+		   font-size: 0.95em !important;
+		   padding: 1em 1.1em !important;
+		   min-width: 100px !important;
+		   display: flex !important;
+		   align-items: center !important;
+		   justify-content: center !important;
+		   text-align: center !important;
+	   }
 }
 @media screen and (max-width: 736px) {
 	#one .actions .button {
