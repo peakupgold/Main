@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Contact US</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dq6xqk5au/image/upload/v1759173279/White_hq309q.png">
+		<style>
+			html, body { background: #010a2c !important; }
+		</style>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+		/* Invert nav colors for TnC only */
+		#nav > ul > li > a {
+		  color: #1f60ff !important;
+		}
+		#nav ul ul a {
+		  color: #1f60ff !important;
+		  background: #fff !important;
+		}
+		#nav ul ul a:hover {
+		  background: #1f60ff !important;
+		  color: #fff !important;
+		}
+		#nav .button.primary {
+		  background: #fff !important;
+		  color: #1f60ff !important;
+		  border: 2px solid #1f60ff !important;
+		}
+		#nav .button.primary:hover {
+		  background: #1f60ff !important;
+		  color: #fff !important;
+		}
+		#nav > ul > li > a:before {
+		  color: #1f60ff !important;
+		}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<!-- <h1 id="logo"><a href="index.html">American Housing Author</a></h1> -->
+					<nav id="nav"> 
+						<ul>
+							<li><a href="https://americanhousingauthor.com" style="color: #fff;">Home</a></li>
+							<li><a href="https://tawk.to/chat/68dcb39f9c002c194a96878a/1j6f1raes" target="_blank" rel="noopener noreferrer" style="color: #fff;">Chat Now</a></li>
+							<li><a href="https://shop.americanhousingauthor.com" style="color: #fff;">Shop</a></li>
+							<li>
+								<a href="https://americanhousingauthor.com" style="color: #fff;">Get Deals</a>
+								<ul>
+									<li><a style="color: #ffffff; font-weight: 300;" href="left-sidebar.html"><i class="fa-regular fa-bookmark"></i>&nbsp;Free eBooks</a></li>
+									<li><a style="color: #ffffff; font-weight: 300;" href="right-sidebar.html"><i class="fa-solid fa-percent"></i>&nbsp;Powerhouse Discounts</a></li>
+									<li><a style="color: #ffffff; font-weight: 300;" href="no-sidebar.html"><i class="fa-solid fa-vest"></i>&nbsp; High-Conversion Apparel</a></li>
+								</ul>
+							</li>
+							<li><a href="https://americanhousingauthor.com" class="button primary" style="font-weight: 900; background: #fff; color: #1f60ff;"><i class="fa-solid fa-user-plus"></i>&nbsp;Get Clients</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Contact Us</h2>
+							<p>We'd love to hear from you! Fill out the form below and we'll get back to you soon.</p>
+						</header>
+						<section id="content">
+							<form id="contactForm" method="post" class="cta">
+								<div class="row gtr-uniform gtr-50">
+									<div class="col-6 col-12-xsmall">
+										<input type="text" name="name" id="name" placeholder="Your Name" required />
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<input type="email" name="email" id="email" placeholder="Your Email" required />
+									</div>
+									<div class="col-12">
+										<textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea>
+									</div>
+									<div class="col-12">
+										<input type="submit" value="Send Message" class="fit primary" />
+									</div>
+								</div>
+							</form>
+						</section>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="copyright">
+						<span><img style="display: block; margin: auto; width: 10%;" src="images/pic01.jpg" alt="" /></span>
+						<li>2025 American Housing Author &copy; All Rights Reserved </li>
+						<li><a href="assets/css/noscript.css" style="text-decoration: none;"> Terms and Conditions </a></li>
+						<li><a href="assets/css/noscript.css" style="text-decoration: none;"> Privacy Policy </a></li>
+						<li><a href="http://html5up.net">Contact US</a></li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		<script>
+		// Replace with your actual Google Apps Script Web App URL
+		const scriptURL = "https://script.google.com/macros/s/AKfycbwlldZ5EGMsYNJj5cNRTVuKizc4wNx2nF66aSyM-SuQIAuXHKGovEzvOcCyRx7ouVSl/exec";
+
+		document.addEventListener('DOMContentLoaded', function() {
+			const form = document.getElementById('contactForm');
+			if (!form) return;
+			form.addEventListener('submit', function(e) {
+				e.preventDefault();
+				const data = {
+					name: form.name.value.trim(),
+					email: form.email.value.trim(),
+					message: form.message.value.trim()
+				};
+				fetch(scriptURL, {
+					method: 'POST',
+					mode: 'no-cors',
+					headers: {
+						'Content-Type': 'application/x-www-form-urlencoded'
+					},
+					body: new URLSearchParams(data)
+				})
+				.then(() => {
+					alert('Thank you! Your message has been sent.');
+					form.reset();
+				})
+				.catch((error) => {
+					alert('There was an error submitting the form.');
+					console.error('Form submission error:', error);
+				});
+			});
+		});
+		</script>
+
+	</body>
+</html>
