@@ -233,9 +233,26 @@ body, input, select, textarea, button, .button, .buttonfind {
 	border-radius: 0.5em !important;
 }
 
+@media screen and (max-width: 960px) {
+	.fit.primary {
+		padding-bottom: 2em !important;
+		font-size: 0.95em !important;
+		min-width: 100px !important;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.fit.primary {
+		padding-bottom: 4em !important;
+		font-size: 0.95em !important;
+		min-width: 100px !important;
+	}
+}
+
+
 @media screen and (max-width: 480px) {
 	.fit.primary {
-		padding: 1em 1.1em !important;
+		padding-bottom: 4em !important;
 		font-size: 0.95em !important;
 		min-width: 100px !important;
 	}
