@@ -1,224 +1,33 @@
-@import url("fontawesome-all.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* Explicit root so rem units resolve predictably */
+html { font-size: 16px; }
 
-@media screen and (max-width: 736px) {
-	/* Cleaned consolidated mobile rules for <=736px. Specific very-small-device
-	   adjustments are applied in the following 480px block to keep intent clear. */
-
-	/* Mobile typography */
-	html, body {
-		font-size: 15px;
+/* --- Final authoritative mobile rules (appended) --- */
+@media (max-width: 600px) {
+	html body h2 {
+		font-size: 2.9rem !important;
+		font-weight: 700 !important;
+		line-height: 1.15 !important;
+		letter-spacing: -0.01em !important;
+		color: #111 !important;
 	}
-
-	h1, h4, h5, h6 {
-		font-size: 1.1em;
-		line-height: 1.2em !important;
+	html body h3 {
+		font-size: 1.6rem !important;
+		font-weight: 700 !important;
+		line-height: 1.2 !important;
+		color: #111 !important;
 	}
-
-	/* Mobile hero h2 */
-	h2 {
-		font-size: 2.5em;
-		line-height: 1.2em !important;
-	}
-
-	h3 {
-		font-size: 1.9em;
-		line-height: 1.2em !important;
-	}
-
 	/* Buttons */
-	.button, input[type="submit"], input[type="button"] {
+	.button, .buttonfind, .fit.primary, input[type="submit"] {
+		padding: 0.9em 1.2em !important;
 		font-size: 1em !important;
-		padding: 1.1em 1.5em !important;
-		min-width: 120px !important;
-		border-radius: 0.5em !important;
-		display: flex !important;
+		display: inline-flex !important;
 		align-items: center !important;
 		justify-content: center !important;
-		text-align: center !important;
 	}
-
-	.image img, .image.fit img {
-		width: 100% !important;
-		height: auto !important;
-		max-width: 100vw !important;
-		display: block;
-	}
-
-	.row, .container {
-		flex-direction: column !important;
-		width: 100% !important;
-		max-width: 100vw !important;
-		padding: 0 0.5em !important;
-	}
-
-	.actions {
-		flex-direction: column !important;
-		align-items: stretch !important;
-		gap: 0.7em !important;
-	}
-
-	nav#nav ul {
-		flex-direction: column !important;
-		gap: 0.7em !important;
-	}
-
-	nav#nav ul li {
-		width: 100% !important;
-		text-align: left !important;
-	}
-
-	.spotlight .content, .wrapper .container {
-		padding: 0.5em !important;
-	}
-
-	.copyright, #footer ul.copyright {
-		font-size: 0.9em !important;
-		text-align: center !important;
-		flex-direction: column !important;
-		gap: 0.5em !important;
-	}
-
-	.buttonfind {
-		font-size: 1em !important;
-		padding: 1.1em 1.5em !important;
-		min-width: 120px !important;
-		border-radius: 0.5em !important;
-		display: flex !important;
-		align-items: center !important;
-		justify-content: center !important;
-		text-align: center !important;
-	}
-
-	.image {
-		padding: 0 !important;
-	
-	}
-
-	/* Center texts and list content inside #one for mobile */
-	#one .content,
-	#one .content .container,
-	#one .content .container .row {
-		text-align: center !important;
-		align-items: center !important;
-	}
-
-	#one .content header,
-	#one .content header h2,
-	#one .content header h4,
-	#one .content .row > * {
-		text-align: center !important;
-	}
-
-	/* Ensure h2/h4 in #one are centered and not overridden by flex parents on mobile */
-	#one, #one .content, #one .content .container, #one .content .row {
-		display: block !important;
-		align-items: normal !important;
-		justify-content: normal !important;
-	}
-
-	#one header h2,
-	#one header h4 {
-		text-align: center !important;
-		margin-left: 0 !important;
-		margin-right: 0 !important;
-	}
-
-	/* #one actions primary sizing for <=736px */
-	#one .actions .button {
-		font-size: 0.9em;
-		min-width: 110px;
-		padding: 0 1.5em;
-	}
-
-	/* Ensure banner heading proportions stay consistent on <=736px */
-	#banner .content header h4 {
-		font-size: 1.1em;
-		align-items: center !important;
-	}
-}
-
-/* Very-small devices: keep the prior 480px-specific tweaks grouped here so narrow
-   device behavior remains close to the original intent */
-@media screen and (max-width: 480px) {
-	html, body {
-		font-size: 13px;
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		font-size: 1em;
-	}
-
-	.button, input[type="submit"], input[type="button"] {
-		font-size: 0.95em !important;
-		padding: 1em 1.1em !important;
-		min-width: 100px !important;
-	}
-
-	.row, .container {
-		padding: 0 0.2em !important;
-	}
-
-	.actions {
-		gap: 0.5em !important;
-	}
-
-	.copyright, #footer ul.copyright {
-		font-size: 0.8em !important;
-		gap: 0.3em !important;
-	}
-
-	/* Slightly smaller for very small devices */
-	#one .actions .button {
-		font-size: 0.85em;
-		min-width: 90px;
-		padding: 0 1.2em;
-	}
-
-	/* Keep banner h2/h4 proportions on very small screens (match desktop ratio ~2.27x) */
-	#banner .content header h2 {
-		font-size: 2.0em;
-	}
-
-	#banner .content header h4 {
-		font-size: 0.88em;
-	}
-}
-/* Force Poppins across the document to override other CSS rules
-   (original global rule saved here for easy rollback)
-html, body, * {
-	font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
-}
-*/
-
-/* Narrowed font-family rule: apply Poppins to main text elements only (no !important)
-   This reduces cascade conflicts and makes responsive changes easier to apply. */
-body, input, select, textarea, button, .button, .buttonfind {
-	font-family: 'Poppins', Arial, Helvetica, sans-serif;
-}
-
-/* Restore Font Awesome font-family for icon elements (override the global rule) */
-.fa, .fas, .far, .fal, .fab, .fa-solid, .fa-regular, [class^="fa-"], [class*=" fa-"] {
-	font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
-	font-weight: 900 !important;
-	font-style: normal !important;
-}
-.fab, .fa-brands {
-	font-family: "Font Awesome 6 Brands" !important;
-	font-weight: 400 !important;
-}
-/* Pseudo-elements used by Font Awesome */
-.fa::before, .fa::after,
-.fas::before, .fas::after,
-.far::before, .far::after,
-.fal::before, .fal::after,
-.fab::before, .fab::after,
-[class^="fa-"]::before, [class*=" fa-"]::before,
-[class^="fa-"]::after, [class*=" fa-"]::after {
-	font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
-	font-weight: 900 !important;
-	font-style: normal !important;
+	/* Ensure images scale and actions stack */
+	.image img, .image.fit img { max-width: 100% !important; height: auto !important; }
+	.actions { flex-direction: column !important; gap: 0.6em !important; }
+	nav#nav ul { flex-direction: column !important; }
 }
 /* Email form submit button: match .button and .buttonfind for centering and padding */
 .fit.primary {
@@ -239,9 +48,7 @@ body, input, select, textarea, button, .button, .buttonfind {
 		min-width: 100px !important;
 	}
 }
-html, body {
-	font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
-}
+/* Keep only one Poppins import (the authoritative import is at the top of the file). */
 /* Center the button in #one and make it mobile-friendly */
 #one .actions {
 	display: flex;
@@ -252,81 +59,56 @@ html, body {
 	min-width: 140px;
 	font-size: 1em;
 }
-/* Final desktop overrides: ensure banner headings and CTA keep intended desktop sizing
-   placed at EOF so these rules win by source order for large screens */
-@media screen and (min-width: 737px) {
-	#banner .content header h2 {
-		font-size: 3em !important;
+/* General mobile improvements */
+@media screen and (max-width: 736px) {
+	html, body {
+		font-size: 15px !important;
 	}
-
-	.banner-cta {
-		padding: 0.8em 1.6em !important;
-		font-size: 0.95em !important;
-		min-width: 120px !important;
-		box-shadow: 0 0 10px rgba(0,0,0,0.18) !important;
-	}
-}
-/* Enforce exact same font-size for all feature headers and the banner heading on desktop */
-@media screen and (min-width: 737px) {
-	header h2,
-	#banner .content header h2 {
-		font-size: 2.7em !important;
-	}
-}
-
-/* Desktop: place banner image to the right of the heading + actions */
-@media screen and (min-width: 737px) {
-	#banner .content {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 2em;
-		text-align: center; /* center text inside the content on desktop */
-		padding: 6em; /* preserve existing spacing */
-	}
-
-	/* Stack header and actions on the left column */
-	#banner .content header {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end; /* right-align child items on desktop */
-		text-align: right;
-		flex: 1 1 auto;
-	}
-
-	/* Ensure the h2 and h4 inside the banner header are right-aligned on desktop */
-	#banner .content header h2,
-	#banner .content header h4 {
-		text-align: right;
-	}
-
-	/* Keep the CTA under the header and aligned to the left column */
-	#banner .content .actions {
-		align-self: center;
-		margin-top: 1.2em;
-		z-index: 3;
-		justify-content: center;
-	}
-
-	/* Image floats to the right as a fixed-size column */
-	#banner .content .image {
-		margin: 0;
-		width: 9em;
-		max-width: 30%;
+	/* Keep layout and spacing changes for smaller screens; heading and button sizing
+		 is consolidated at the end of the file to avoid duplication/override issues. */
+	  .image img, .image.fit img {
+		width: 100% !important;
+		height: auto !important;
+		max-width: 100vw !important;
 		display: block;
-		opacity: 0.95;
-		border-radius: 10%;
-		flex: 0 0 auto;
 	}
-
-	#banner .content .image img {
-		width: 100%;
-		height: auto;
-		display: block;
-		border-radius: 10%;
+	.row, .container {
+		flex-direction: column !important;
+		width: 100% !important;
+		max-width: 100vw !important;
+		padding: 0 0.5em !important;
+	}
+	.actions {
+		flex-direction: column !important;
+		align-items: stretch !important;
+		gap: 0.7em !important;
+	}
+	nav#nav ul {
+		flex-direction: column !important;
+		gap: 0.7em !important;
+	}
+	nav#nav ul li {
+		width: 100% !important;
+		text-align: left !important;
+	}
+	.spotlight .content, .wrapper .container {
+		padding: 0.5em !important;
+	}
+	.copyright, #footer ul.copyright {
+		font-size: 0.9em !important;
+		text-align: center !important;
+		flex-direction: column !important;
+		gap: 0.5em !important;
+	}
+	/* .buttonfind/button sizing consolidated later */
+	.image {
+		padding: 0 !important;
 	}
 }
-/* Mobile rules moved to end of file to ensure they load after base rules */
+
+/* specific #one .actions .button sizing consolidated later */
+/* FontAwesome import kept where needed by the project (avoid duplicate imports). */
+/* Additional Poppins weights not needed — using single Poppins import above */
 
 /*
 	Landed by HTML5 UP
@@ -349,9 +131,7 @@ section, summary, time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: 'Poppins', sans-serif;
-  	font-size: 16pt;
- 	font-weight: 700;
+	/* Keep font-family declarations centralized; avoid duplicating imports */
 	font: inherit;
 	vertical-align: baseline;}
 
@@ -382,10 +162,7 @@ table {
 }
 
 body {
-	/* Allow mobile browsers to scale text for readability (iOS/Android) */
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	text-size-adjust: 100%;
+	-webkit-text-size-adjust: none;
 }
 
 mark {
@@ -2892,6 +2669,7 @@ input, select, textarea {
 			position: absolute;
 			left: 0;
 			top: 0;
+			background-image: url("images/overlay.png");
 			width: 100%;
 			height: 100%;
 			z-index: 1;
@@ -3539,6 +3317,7 @@ input, select, textarea {
 		}
 
 		.spotlight:before {
+			background-image: url("images/overlay.png");
 			content: '';
 			display: block;
 			height: 100%;
@@ -3952,10 +3731,10 @@ input, select, textarea {
 		}
 
 		#banner:after {
-			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.75)), url("images/overlay.png");;
-			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.75)), url("images/overlay.png");;
-			background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.75)), url("images/overlay.png");;
-			background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.75)), url("images/overlay.png");;
+			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
 			content: '';
 			display: block;
 			height: 100%;
@@ -3966,14 +3745,14 @@ input, select, textarea {
 		}
 
 		#banner .content {
-					display: inline-block;
-					margin-right: 1%;
-					max-width: 95%;
-					padding: 6em;
-					position: relative;
-					text-align: right;
-					vertical-align: middle;
-					z-index: 1;
+			display: inline-block;
+			margin-right: 1%;
+			max-width: 95%;
+			padding: 6em;
+			position: relative;
+			text-align: right;
+			vertical-align: middle;
+			z-index: 1;
 		}
 
 			#banner .content header {
@@ -3982,25 +3761,8 @@ input, select, textarea {
 			}
 
 				#banner .content header h2 {
-					font-size: 3em;
+					font-size: 2.5em;
 					margin: 0;
-				}
-
-				/* Banner improvements: ensure CTA sits above the image and image is subdued */
-				#banner .content .actions {
-					display: flex;
-					justify-content: center;
-					margin-top: 1.2em;
-					z-index: 3;
-				}
-
-				#banner .content .image {
-					display: block;
-					margin: 2em auto 0 auto;
-					width: 60%;
-					max-width: 420px;
-					opacity: 0.95;
-					filter: grayscale(10%);
 				}
 
 				#banner .content header p {
@@ -4235,21 +3997,6 @@ input, select, textarea {
 						margin: 0;
 					}
 
-				/* Ensure spotlight images show and center on mobile like other images */
-				.spotlight .image.main {
-					display: block !important;
-					max-height: 40vh;
-					overflow: hidden;
-					margin: 0 auto 1.5em auto;
-					text-align: center;
-				}
-
-				.spotlight .image.main img {
-					width: 100%;
-					height: auto;
-					display: block;
-				}
-
 		/* Footer */
 
 			#footer {
@@ -4275,10 +4022,7 @@ input, select, textarea {
 			body, input, select, textarea {
 				font-size: 12pt;
 			}
-
-			h2 {
-				font-size: 1.5em;
-			}
+			
 
 			h3 {
 				font-size: 1.2em;
@@ -4624,37 +4368,3 @@ input, select, textarea {
 					}
 
 	}
-
-/* Banner CTA styles (class added to remove inline styling and allow responsive control) */
-.banner-cta {
-	padding: 0.8em 1.6em;
-	font-size: 0.95em;
-	background-color: #1f60ff;
-	box-shadow: 0 0 10px rgba(0,0,0,0.18);
-	min-width: 120px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-}
-
-@media screen and (max-width: 736px) {
-	.banner-cta {
-		font-size: 0.92em !important;
-		/* reduced horizontal padding for mobile */
-		padding: 0.6em 0.9em !important;
-		box-shadow: none !important;
-		min-width: 100px !important;
-	}
-}
-
-/* Ensure the absolute wrapper that holds the .actions list centers its contents */
-#banner > div[style] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none; /* keep clicks to the button only */
-}
-
-#banner > div[style] .actions {
-    pointer-events: auto;
-}
