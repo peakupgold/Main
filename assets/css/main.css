@@ -252,7 +252,7 @@ body, input, select, textarea, button, .button, .buttonfind {
 
 @media screen and (max-width: 480px) {
 	.fit.primary {
-		padding-bottom: 4em !important;
+		padding-bottom: 2em !important;
 		font-size: 0.95em !important;
 		min-width: 100px !important;
 	}
