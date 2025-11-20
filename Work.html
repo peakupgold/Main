@@ -55,7 +55,85 @@
 		}
 		</style>
 	</head>
-	<body class="is-preload">
+    <body class="is-preload">
+    <style>
+    /* Hide only the main content, keep nav and footer visible */
+    #main { display: none !important; }
+    
+    #work-image-only {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(100vh - 200px); /* Account for nav and footer */
+        background: #fff;
+        padding: 1rem;
+        box-sizing: border-box;
+        position: relative;
+    }
+    #work-image-only img {
+        max-width: 100%;
+        max-height: 70vh;
+        width: auto;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+        object-fit: contain;
+    }
+    
+    /* Desktop optimization */
+    @media (min-width: 768px) {
+        #work-image-only {
+            padding: 2rem;
+            min-height: calc(100vh - 250px);
+        }
+        #work-image-only img {
+            max-width: 95%;
+            max-height: 75vh;
+            border-radius: 12px;
+            box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+        }
+    }
+    
+    /* Large desktop optimization */
+    @media (min-width: 1200px) {
+        #work-image-only img {
+            max-width: 85%;
+            max-height: 80vh;
+        }
+    }
+    
+    /* Mobile optimization */
+    @media (max-width: 767px) {
+        #work-image-only {
+            padding: 0.5rem;
+            min-height: calc(100vh - 180px);
+        }
+        #work-image-only img {
+            max-width: 95%;
+            max-height: 60vh;
+            border-radius: 6px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+        }
+    }
+    
+    /* Very small mobile devices */
+    @media (max-width: 480px) {
+        #work-image-only {
+            padding: 0.25rem;
+            min-height: calc(100vh - 160px);
+        }
+        #work-image-only img {
+            max-width: 98%;
+            max-height: 55vh;
+            border-radius: 4px;
+        }
+    }
+    </style>
+
+    <div id="work-image-only">
+        <img src="images/Workinprogress.jpg">
+    </div>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -65,11 +143,11 @@
 						<ul>
 							<li><a href="https://americanhousingauthor.com" style="color: #fff;">Home</a></li>
 							<li><a href="https://tawk.to/chat/68dcb39f9c002c194a96878a/1j6f1raes" target="_blank" rel="noopener noreferrer" style="color: #fff;">Chat Now</a></li>
-							<li><a href="https://store.americanhousingauthor.com" style="color: #fff;">Shop</a></li>
+							<li><a href="https://store.americanhousingauthor.com" style="color: #fff;">Club Shop</a></li>
 							<li>
 								<a href="https://deals.americanhousingauthor.com" style="color: #fff;">Get Deals</a>
 								<ul>
-									<li><a style="color: #ffffff; font-weight: 300;" href="ebooks.html"><i class="fa-regular fa-bookmark"></i>&nbsp;Free eBooks</a></li>
+									<li><a style="color: #ffffff; font-weight: 300;" href="Work.html"><i class="fa-regular fa-bookmark"></i>&nbsp;Free eBooks</a></li>
 									<li><a style="color: #ffffff; font-weight: 300;" href="https://deals.americanhousingauthor.com"><i class="fa-solid fa-percent"></i>&nbsp;Powerhouse Discounts</a></li>
 									<li><a style="color: #ffffff; font-weight: 300;" href="https://store.americanhousingauthor.com"><i class="fa-solid fa-vest"></i>&nbsp; High-Conversion Apparel</a></li>
 								</ul>
@@ -78,55 +156,6 @@
 						</ul>
 					</nav>
 				</header>
-
-			<!-- Main -->
-				<div id="main" class="wrapper style1">
-					<div class="container">
-						<header class="major">
-							<h2>Privacy Policy</h2>
-						</header>
-
-						<!-- Content -->
-							<section id="content">
-								<p><strong style="color: #717171;">Effective Date: October 3rd 2025</strong></p>
-
-								<h3>Information Collected</h3>
-									<p>Personal information may be collected directly when you fill out forms, subscribe to services, participate in programs, or interact with marketing materials.</p>
-									<p>This may include your name, email address, phone number (U.S. only), and optional data such as preferences or location. Technical data may be collected automatically through cookies or analytics tools.</p>
-
-									<h3>How Information is Used</h3>
-									<p>Data may be used to provide services, send communications, personalize content, and deliver marketing messages via email or SMS. It may also be used to comply with legal obligations or improve the user experience.</p>
-
-									<h3>SMS & Email Communications</h3>
-									<p>By submitting your contact information, you consent to receiving promotional and service-related communications. You can unsubscribe at any time by clicking links in emails or replying "STOP" to SMS messages.</p>
-									<p>Your information will not be sold or shared for third-party marketing without your explicit consent.</p>
-
-									<h3>Data Sharing and Disclosure</h3>
-									<p>Your data may be shared with trusted third-party service providers who assist in delivering communications or hosting services. All such providers are required to protect your data under relevant data protection laws.</p>
-
-									<h3>Data Retention</h3>
-									<p>Personal data is retained only for as long as necessary to fulfill the purposes for which it was collected or to comply with legal requirements. You may request deletion at any time.</p>
-
-									<h3>Data Security</h3>
-									<p>Reasonable security measures are in place to protect your information from unauthorized access or disclosure. However, no method of online transmission is completely secure.</p>
-
-									<h3>Your Rights</h3>
-									<p>For EU Residents (GDPR): You have the right to access, correct, delete, or restrict processing of your personal data, and to object to marketing uses. You may also request data portability or file a complaint with a supervisory authority.</p>
-									<p>For U.S. Residents (e.g., CCPA): You may request to know what data is collected, request deletion, and opt out of the sale of personal data. You will not be discriminated against for exercising your privacy rights.</p>
-
-									<h3>Cookies and Tracking Technologies</h3>
-									<p>This site may use cookies or similar technologies for analytics and advertising. You can manage cookie settings through your browser or by using provided consent tools.</p>
-
-									<h3>Updates to This Policy</h3>
-									<p>This policy may be revised periodically. Continued use of the site after changes are posted indicates acceptance of the revised terms.</p>
-
-									<h3>Contact</h3>
-									<p>For any privacy-related inquiries or to exercise your data rights, please use the contact form available on the website.</p>
-
-							</section>
-
-					</div>
-				</div>
 
 			<!-- Footer -->
 				<footer id="footer">
