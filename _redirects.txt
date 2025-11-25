@@ -1,4 +1,4 @@
-/terms   /terms.html    200
-/contact  /contact.html  200
-/privacy /privacy.html 200
-/ebooks /ebooks.html 200
+/terms.html /terms 301
+/contact.html /contact 301
+/privacy.html /privacy 301
+/ebooks.html /ebooks 301
